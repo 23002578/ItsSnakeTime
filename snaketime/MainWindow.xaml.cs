@@ -39,8 +39,8 @@ namespace AMSnake
                 { Direction.Left, 270 }
             };
 
-        private readonly int rows = 15;
-        private readonly int cols = 15;
+        private readonly int rows = 30;
+        private readonly int cols = 30;
         private readonly Image[,] gridImages;
         private GameState gameState;
         private bool gameRunning;
@@ -138,7 +138,7 @@ namespace AMSnake
         {
             while (!gameState.GameOver)
             {
-                await Task.Delay(100-boostSpeed);
+                await Task.Delay(150-boostSpeed);
                 gameState.Move();
                 Draw();
             }
